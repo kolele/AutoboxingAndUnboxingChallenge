@@ -19,8 +19,9 @@ public class Branch {
         return customers;
     }
 
-    public void addNewCustomer(String name, Double initialTransaction){
-        Customer customer = new Customer("Kole");
+    public void addNewCustomer(String name, double initialAmount){
+        Customer customer = new Customer(name,initialAmount);
+        customers.add(customer);
 
     }
 }
