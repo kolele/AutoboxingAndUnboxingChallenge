@@ -20,8 +20,6 @@ public class Branch {
     }
 
     public void addNewCustomer(String name, double initialAmount){
-        Customer customer = new Customer(name,initialAmount);
-        customers.add(customer);
-
+        customers.add(new Customer(name,initialAmount));
     }
 }

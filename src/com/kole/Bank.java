@@ -24,7 +24,12 @@ public class Bank {
         this.branches.add(branch);
     }
 
-    public void addCustomer(){
+    public void addCustomer(Branch branch, String name, double initialAmount){
 
     }
+
+    private void identifyBranch (String name){
+
+    }
+
 }
