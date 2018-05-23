@@ -9,7 +9,7 @@ public class Customer {
     public Customer(String name, double initialTransaction) {
         this.name = name;
         this.transactions = new ArrayList<Double>();
-        addInitialTransaction(initialTransaction);
+        addTransaction(initialTransaction);
     }
 
     public String getName() {
@@ -21,7 +21,7 @@ public class Customer {
     }
 
 
-    public void addInitialTransaction(double initialTransaction){
+    public void addTransaction(double initialTransaction){
         this.transactions.add(initialTransaction);
     }
 }
