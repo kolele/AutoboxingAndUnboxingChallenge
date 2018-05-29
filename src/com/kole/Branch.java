@@ -24,7 +24,10 @@ public class Branch {
     }
 
     public void addAddtionalTransactions(String name, int amount){
+        Customer tempCustomer = new Customer(name,amount);
+        for (int i=0; i<customers.size(); i++){
 
+        }
     }
 
     public boolean findCustomer(String name){
@@ -36,7 +39,10 @@ public class Branch {
     }
 
     public void printBranchCustomers(){
-
+        for (int i=0; i<customers.size(); i++){
+            System.out.println(customers.get(i).getName());
+            System.out.println(customers.get(i).getTransactions());
+        }
     }
 }
 

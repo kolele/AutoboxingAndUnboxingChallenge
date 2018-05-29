@@ -17,7 +17,17 @@ public class Customer {
         return name;
     }
 
-    public Customer addCustomer(String name, double amount){
-        return new Customer(name,amount);
+    public ArrayList<Double> getTransactions() {
+        return transactions;
+    }
+
+    public void addCustomer(double initialTransaction){
+        transactions.add(initialTransaction);
+        //return new Customer(name,amount);
+
+    }
+
+    public void addTransaction(String name, double amount){
+        
     }
 }
