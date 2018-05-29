@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Customer {
     private String name;
-    private int initialTransaction;
-    private ArrayList<Integer> transactions;
+    private double initialTransaction;
+    private ArrayList<Double> transactions;
 
-    public Customer(String name, int initialTransaction) {
+    public Customer(String name, double initialTransaction) {
         this.name = name;
         this.initialTransaction = initialTransaction;
         this.transactions = new ArrayList<>();
@@ -17,7 +17,7 @@ public class Customer {
         return name;
     }
 
-    public int getInitialTransaction() {
-        return initialTransaction;
+    public Customer addCustomer(String name, double amount){
+        return new Customer(name,amount);
     }
 }

@@ -11,32 +11,33 @@ public class Branch {
         this.customers = new ArrayList<>();
     }
 
-    public boolean addNewCustomer(String name, int initialTransaction){
-        for (int i=0; i<customers.size(); i++){
-            if (customers.get(i).getName().contains(name)){
-                System.out.println("Customer already exists");
-                return false;
-            } else customers.add(new Customer(name,initialTransaction));
-            System.out.println("Added new customer with name " + customers.get(i).getName() + "with initial transaction of " + customers.get(i).getInitialTransaction());
 
-        }return true;
+
+    public void addNewCustomer(String name, int initialTransaction){
+
+        if (findCustomer(name)){
+            System.out.println("Customer already present. Cannot add it");
+        } else {
+            customers.add(new Customer(name, initialTransaction));
+            System.out.println("Added customer");
+        }
     }
 
     public void addAddtionalTransactions(String name, int amount){
 
     }
 
-    public Customer findCustomer(String name){
+    public boolean findCustomer(String name){
         for (int i=0; i<customers.size();i++){
             if (customers.get(i).getName().equals(name)){
-                return customers.get(i);
+                return true;
             }
-        } return null;
+        } return false;
     }
 
     public void printBranchCustomers(){
-        for (int i=0;i<customers.size();i++){
-            System.out.println(customers.get(i).getName());
-        }
+
     }
 }
+
+
