@@ -16,4 +16,8 @@ public class Customer {
     public String getName() {
         return name;
     }
+
+    public int getInitialTransaction() {
+        return initialTransaction;
+    }
 }
