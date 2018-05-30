@@ -15,7 +15,7 @@ public class Branch {
         return name;
     }
 
-    public void addNewCustomer(String name, int initialTransaction){
+    public void addNewCustomer(String name, double initialTransaction){
 
         if (findCustomer(name)){
             System.out.println("Customer already present. Cannot add it");
@@ -25,7 +25,7 @@ public class Branch {
         }
     }
 
-    public void addAddtionalTransactions(String name, int amount){
+    public void addAddtionalTransactions(String name, double amount){
         if (returnCustomer(name)==null){
             System.out.println("Cannot add transaction as customer does not exist");
         } else {
