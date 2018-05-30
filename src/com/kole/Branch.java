@@ -11,7 +11,9 @@ public class Branch {
         this.customers = new ArrayList<>();
     }
 
-
+    public String getName() {
+        return name;
+    }
 
     public void addNewCustomer(String name, int initialTransaction){
 
@@ -31,7 +33,7 @@ public class Branch {
         }
     }
 
-    public boolean findCustomer(String name){
+    private boolean findCustomer(String name){
         for (int i=0; i<customers.size();i++){
             if (customers.get(i).getName().equals(name)){
                 return true;
