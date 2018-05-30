@@ -23,6 +23,10 @@ public class Bank {
 
     }
 
+    public void addCustomer(String branchName, String customerName, double initialTransaction){
+        
+    }
+
     public Branch returnBranch(String name){
         for (int i=0; i<branches.size();i++){
             if (branches.get(i).getName().equals(name)){
