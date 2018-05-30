@@ -6,6 +6,6 @@ public class Main {
         Branch branch = new Branch("kobasa");
         branch.addNewCustomer("lebac", 500);
         branch.addNewCustomer("Kole", 400);
-        branch.printBranchCustomers();
+
     }
 }

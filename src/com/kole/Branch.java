@@ -24,9 +24,10 @@ public class Branch {
     }
 
     public void addAddtionalTransactions(String name, int amount){
-        Customer tempCustomer = new Customer(name,amount);
-        for (int i=0; i<customers.size(); i++){
-
+        if (returnCustomer(name)==null){
+            System.out.println("Cannot add transaction as customer does not exist");
+        } else {
+            returnCustomer(name).addTransaction(amount);
         }
     }
 
@@ -38,11 +39,12 @@ public class Branch {
         } return false;
     }
 
-    public void printBranchCustomers(){
-        for (int i=0; i<customers.size(); i++){
-            System.out.println(customers.get(i).getName());
-            System.out.println(customers.get(i).getTransactions());
-        }
+    public Customer returnCustomer(String name){
+        for (int i=0; i<customers.size();i++){
+            if (customers.get(i).getName().equals(name)){
+                return customers.get(i);
+            }
+        } return null;
     }
 }
 
