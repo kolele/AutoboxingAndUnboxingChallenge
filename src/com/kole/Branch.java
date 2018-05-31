@@ -15,6 +15,10 @@ public class Branch {
         return name;
     }
 
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
     public void addNewCustomer(String name, double initialTransaction){
 
         if (findCustomer(name)){

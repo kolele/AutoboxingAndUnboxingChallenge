@@ -28,7 +28,7 @@ public class Bank {
         if (returnBranch(branchName) == null) {
             System.out.println("Cannot add customer as branch " + branchName + " does not exist");
         } else {
-            branch.addNewCustomer(name, initialTransaction);
+            branch.addNewCustomer(customerName, initialTransaction);
         }
     }
 
@@ -46,8 +46,11 @@ public class Bank {
         if (returnBranch(branchName)== null){
             System.out.println("Branch does not exist");
         } else {
-            for (int i=0; i< branches.size();i++){
-                System.out.println();
+            System.out.println("Details for branch " + branchName + " :" );
+            ArrayList<Customer> branchCustomers = branch.getCustomers();
+            for (int i=0; i<branchCustomers.size();i++ ){
+                Customer branchCustomer = branchCustomers.get(i);
+                System.out.println(branchCustomer.getName());
             }
         }
     }
